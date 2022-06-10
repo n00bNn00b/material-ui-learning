@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Button } from "@mui/material";
 const MuiButton = () => {
   return (
-    <Stack>
+    <Stack spacing={4}>
       <Stack spacing={2} direction="row">
         <Button variant="text" href="https://www.google.com">
           Text
@@ -28,6 +28,17 @@ const MuiButton = () => {
         </Button>
         <Button variant="contained" color="success">
           Success
+        </Button>
+      </Stack>
+      <Stack display="block" spacing={2} direction="row">
+        <Button variant="contained" size="small">
+          Small
+        </Button>
+        <Button variant="contained" size="medium">
+          Medium
+        </Button>
+        <Button variant="contained" size="large">
+          Large
         </Button>
       </Stack>
     </Stack>
