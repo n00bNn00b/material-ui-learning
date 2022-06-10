@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Button } from "@mui/material";
+import { Stack, Button, IconButton } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 const MuiButton = () => {
   return (
@@ -45,13 +45,22 @@ const MuiButton = () => {
       {/* Icon */}
       <Stack spacing={2} direction="row">
         {/* startIcon */}
-        <Button variant="contained" startIcon={<SendIcon />}>
+        <Button
+          variant="contained"
+          startIcon={<SendIcon />}
+          disableRipple
+          onClick={() => alert("Clicked!")}
+        >
           Send
         </Button>
         {/* endIcon */}
-        <Button variant="contained" endIcon={<SendIcon />}>
+        <Button variant="contained" endIcon={<SendIcon />} disableElevation>
           Send
         </Button>
+        {/* Icon Button */}
+        <IconButton aria-label="send" color="success" size="small">
+          <SendIcon />
+        </IconButton>
       </Stack>
     </Stack>
   );
