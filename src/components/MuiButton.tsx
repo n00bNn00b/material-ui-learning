@@ -13,13 +13,13 @@ import FormatItalicIcon from "@mui/icons-material/FormatItalic";
 import FormatUnderlinedIcon from "@mui/icons-material/FormatUnderlined";
 
 const MuiButton = () => {
-  const [formats, setFformats] = useState<string[]>([]);
+  const [formats, setFformats] = useState<string | null>(null);
   console.log({
     formats,
   });
   const handleFormatChange = (
     e: React.MouseEvent<HTMLElement>,
-    updateFormats: string[]
+    updateFormats: string | null
   ) => {
     setFformats(updateFormats);
   };
@@ -104,6 +104,10 @@ const MuiButton = () => {
           aria-label="text formatting"
           value={formats}
           onChange={handleFormatChange}
+          size="small"
+          color="success"
+          orientation="vertical"
+          exclusive
         >
           <ToggleButton value="bold" aria-label="bold">
             <FormatBoldIcon />
